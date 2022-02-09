@@ -656,10 +656,13 @@ footer h2 {
   align-items: center;
   justify-content: center;
 }
-.modal-close-button:hover {
+.modal-close-button:hover,
+.modal-close-button:focus {
   background-color: var(--blu-color);
   fill: var(--white-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-icon {
   width: 18px;
   height: 18px;
@@ -677,22 +680,38 @@ footer h2 {
   text-align: center;
   letter-spacing: 0.03em;
 }
+
 .modal-input {
+  margin-bottom: 10px;
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
 }
-
+.modal-input:hover,
+.modal-input:focus {
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--blu-color);
+}
+.lable-modal {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
 .modal-comment {
+  resize: none;
   padding: 12px;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .modal-comment::placeholder {
   font-size: 12px;
@@ -700,8 +719,14 @@ footer h2 {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-check {
+.modal-comment:hover,
+.modal-comment:focus {
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--blu-color);
+}
+.checkbox-text {
   display: flex;
+
   align-items: center;
   justify-content: center;
   font-weight: normal;
@@ -709,37 +734,13 @@ footer h2 {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: 30px;
 }
-.modal-input {
-  margin-bottom: 10px;
+
+.modal-pact {
+  margin-left: 4px;
+  color: #2196f3;
+  text-decoration: underline;
 }
-.btn-submit {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1, 87;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--white-color);
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  width: 200px;
-  height: 50px;
-  left: 700px;
-  top: 712px;
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-.lable-modal {
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: #757575;
-  display: block;
-  margin-bottom: 4px;
-}
+
 /* end */
