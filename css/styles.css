@@ -842,9 +842,11 @@ footer h2 {
   display: block;
   margin-right: 7px;
 }
+
 .checkbox-modal:checked + .checkbox-text::before {
   background-image: url(../images/icon_check.svg);
   border: none;
+  
 }
 .modal-pact {
   margin-left: 4px;
